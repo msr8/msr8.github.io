@@ -1,9 +1,0 @@
-python3
-cpufetch
-neofetch
-pip
-tmux
-htop
-cowsay
-lolcat
-hollywood
