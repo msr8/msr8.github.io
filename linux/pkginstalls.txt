@@ -1,0 +1,2 @@
+python3 cpufetch neofetch tmux htop cowsay lolcat hollywood openssh-server openssh-client sl nyancat tor gnome-tweaks
+
