@@ -1,0 +1,230 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1;background:#dff5f5}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{text-decoration:none}
+mark{font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+strong{font-weight:bold}
+h1{font-size:2em}
+body{padding:10px 20px;font-family:arial}
+.navigation{display:none}
+h1{margin:20px 0 10px;font-size:25px}
+h2{margin:20px 0 10px;font-size:21px}
+h3{margin:20px 0 5px;font-size:19px}
+p {
+    margin: 0 0 20px;
+    font-size: 17px;
+    line-height: 21px;
+}
+.clearboth{clear:both}
+.clearfix:after{clear:both;content:" ";display:block;font-size:0;height:0;visibility:hidden}
+.clearfix{display:inline-block}
+* html .clearfix{height:1%}
+.clearfix{display:block}
+#maze{width: 1000px;height: 1000px;margin: 30px auto;position: relative;cursor: url('pointer.png'), auto}
+#maze.normalcursor {cursor: auto}
+.wall{background:#293838;position: absolute;display: none;z-index:5}
+.dead .wall {background: #bf0000}
+#start {line-height: 40px;cursor:pointer;top: 70%;left: 26%;right: 51%;bottom: 20%;position: absolute;background: #137913;color: #FFF;z-index: 8;text-align: center;padding-top: 20px;font-weight: bold;font-size: 22px;border-radius: 20px}
+#start.go {color: #137913;background: transparent}
+.level1 .lev1{display: block}
+.level2 .lev2{display: block}
+.level3 .lev3{display: block}
+a.homelink {
+    display: block;
+    float: left;
+    color: #293838;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+	text-decoration:none;
+}
+#finish {
+    top: 15%;
+    left: 77%;
+    right: 9%;
+    bottom: 78%;
+    position: absolute;
+    z-index: 6;
+    overflow: hidden;
+    letter-spacing: 0;
+    line-height: 0;
+}
+#finish > div {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: #000;
+}
+#finish > div:nth-child(2n){background:#FFF}
+.level2 #start, .level3 #start {display:none}
+#level {top: 23%;left: auto;right: 7%;bottom: auto;position: absolute;color: #FFF;z-index: 7;font-weight: bold;letter-spacing: 0.1px;font-size: 20px}
+#audioplayer{display:none}
+.scarehere {
+    z-index: 9;
+    top: 21%;
+    left: 56%;
+    right: 27%;
+    bottom: 73%;
+    position: absolute;
+    /*background: rgba(255,55,255,0.2);*/
+    display: none;
+}
+.scarehere#s2 {
+    top: 21%;
+    left: 56%;
+    right: 40%;
+    bottom: 66%;
+}
+.scarehere#s3 {
+    top: 27%;
+    left: 62%;
+    right: 27%;
+    bottom: 68%;
+}
+.level3 .scarehere {display: block}
+	
+	
+img.preload {
+    position: absolute;
+    opacity: 0.1;
+    height: 2px;
+    width: 2px;
+}
+#jumpscare {z-index: 99;top: -5%;left: -5%;right: -5%;bottom: -5%;position: absolute;display: none;cursor: none}
+body.scare {background: #000}
+.scare #jumpscare {display: block}
+#jumpscare img{width:100%}
+#w1{top: 0px;left: 0;right: 0;bottom: 85%}
+#w2{top: 0;left: 0;right: 80%;bottom: 0}
+#w3{top: 0;left: 90%;right: 0;bottom: 0}
+#w4{top: 85%;left: 0;right: 0;bottom: 0}
+#w5{top: 22%;left: 55%;right: 5%;bottom: 15%}
+.level2 #finish {
+    top: 86%;
+    left: 78%;
+    right: 4%;
+    bottom: 8%;
+    background-position: top left;
+}
+.level2 #level {top: auto;left: auto;right: 10%;bottom: 15%}
+#w6{top: 0px;left: 0;right: 0;bottom: 92%}
+#w7{top: 0;left: 0;right: 92%;bottom: 0}
+#w8{top: 0;left: 92%;right: 0;bottom: 0}
+#w9{top: 92%;left: 0;right: 0;bottom: 0}
+#w10{top: 27%;left: 27%;right: 0%;bottom: 60%}
+#w11{top: 53%;left: 7%;right: 21%;bottom: 36%}
+#w12{top: 76%;bottom: 16%;left: 20%;right: 7%}
+#w13{top: 76%;bottom: 14%;left: 20%;right: 7%}
+.level3 #finish {
+    top: 12%;
+    left: 62%;
+    right: 28%;
+    bottom: 78%;
+}
+.level3 #level {top: 12%;right: 42%}
+#w14 {top: 0px;left: 0;right: 0;bottom: 78%}
+#w15{top: 0;left: 0;right: 92%;bottom: 0}
+#w16{top: 0;left: 92%;right: 0;bottom: 0}
+#w17{top: 92%;left: 0;right: 0;bottom: 0}
+#w18{top: 51%;bottom: 18%;left: 17%;right: 7%}
+#w19{top: 8%;bottom: 54%;left: 4%;right: 40%}
+#w20{top: 22%;bottom: 28%;left: 69%;right: 3%}
+#w21{top: 35%;bottom: 52%;left: 54%;right: 33%}
+#w22{top: 22%;bottom: 74%;left: 57%;right: 35%}
+#w23 {top: 8%;bottom: 77%;left: 71%;right: 2%}
+#w24{top: 27%;bottom: 67%;left: 62%;right: 23%}
+#closeArticle {
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 30px;
+    background: #137913;
+    color: #FFF;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px;
+}
+#closeArticle:hover {background:#293838}
+.article {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    background: #FFF;
+}
+.hideinstructions {
+    cursor: pointer;	
+}
+
+@media screen and (max-width: 1200px) {
+#finish > div {
+    width: 14px;
+    height: 14px;
+}
+#start {
+    line-height: 20px;
+}
+#maze {
+    width: 600px;
+    height: 600px;
+}
+#finish {
+    right: 5%;
+}
+.level3 #finish {
+    top: 9%;
+    left: 61%;
+    right: 26%;
+    bottom: 78%;
+}
+}
+
+@media screen and (max-width: 800px) {
+#maze {
+    width: 400px;
+    height: 400px;
+}
+#start {
+    line-height: 18px;
+    font-size: 18px;
+    padding-top: 12px;
+}
+
+	
+}
+
+@media screen and (max-width: 430px) {
+#maze {
+    width: 250px;
+    height: 250px;
+	margin-top:50px;
+}
+#start {
+    font-size: 14px;
+    padding-top: 5px;
+}
+#finish > div {
+    width: 8px;
+    height: 8px;
+}
+.level3 #finish {
+    left: 62%;
+}
+a.homelink {
+    font-size: 15px;
+}
+}
