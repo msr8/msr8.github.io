@@ -70,9 +70,9 @@
 
 **USA:** 18002738255
 
+<br>
 
-
-Remember, you are not alone, its never too late to reach out for help
+Remember, you are not alone. It is never too late to reach out for help. You matter
 
 
 
