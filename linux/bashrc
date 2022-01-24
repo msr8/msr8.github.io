@@ -4,5 +4,25 @@ alias ram='neofetch -d "memory"'
 alias locip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
 
 
-PS1='\[\033[01;32m\] ╭─\u\[\033[00m\] at \[\033[01;35m\]\h ($(locip))\[\033[00m\] in \[\033[01;34m\]\w\n \[\033[01;32m\]╰─$ \[\033[00m\]'
+
+
+# ---------- COLORS ----------
+RESET="$(echo -e '\033[0m')" 
+BGreen="$(echo -e '\033[1;32m')"
+BPurple="$(echo -e '\033[1;35m')"
+BBlue="$(echo -e '\033[1;34m')"  
+BWhite="$(echo -e '\033[1;37m')"  
+
+
+
+# ---------- PS1 ----------
+# User
+PS1='${BWhite} ╭─[${BGreen}\u${BWhite}]-'
+# Hostname
+PS1+='[${BPurple}\h ($(locip))${BWhite}]-'
+# Pwd
+PS1+='[${BBlue}\w${BWhite}]\n'
+# Final
+PS1+=' ╰─[${BGreen}\$${BWhite}] ${RESET}'
+
 export PS1
