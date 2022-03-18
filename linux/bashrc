@@ -1,28 +1,21 @@
 alias cls='clear'
 alias py='python3'
+alias ls='lsd'
+alias vim='nvim'
 alias ram='neofetch -d "memory"'
 alias locip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
 
 
 
-
-# ---------- COLORS ----------
-RESET="$(echo -e '\033[0m')" 
-BGreen="$(echo -e '\033[1;32m')"
-BPurple="$(echo -e '\033[1;35m')"
-BBlue="$(echo -e '\033[1;34m')"  
-BWhite="$(echo -e '\033[1;37m')"  
-
-
-
 # ---------- PS1 ----------
 # User
-PS1='${BWhite} ╭─[${BGreen}\u${BWhite}]-'
+PS1='\[\033[1;37m\] ╭─[\[\033[1;32m\]\u\[\033[1;37m\]]-'
 # Hostname
-PS1+='[${BPurple}\h ($(locip))${BWhite}]-'
+PS1+='[\[\033[1;35m\]\h ($(locip))\[\033[1;37m\]]-'
 # Pwd
-PS1+='[${BBlue}\w${BWhite}]\n'
+PS1+='[\[\033[1;34m\]\w\[\033[1;37m\]]\n'
 # Final
-PS1+=' ╰─[${BGreen}\$${BWhite}] ${RESET}'
+PS1+=' ╰─[\[\033[1;32m\]\$\[\033[1;37m\]] \[\033[0m\]'
 
 export PS1
+
