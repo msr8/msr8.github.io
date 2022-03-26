@@ -1,7 +1,7 @@
-python3 cpufetch neofetch tmux htop cowsay lolcat hollywood openssh-server openssh-client sl nyancat tor gnome-tweaks cmatrix bat gdu lsd speedtest shellcheck spotify-tui
+python3 cpufetch neofetch tmux htop cowsay lolcat openssh-server openssh-client nyancat tor bat gdu lsd shellcheck
+
+pip3 install spotifyfetch
 
 
-npm install wipeclean -g
-https://github.com/JeanJouliaCode/wipeClean
 https://github.com/sdushantha/tmpmail
-
+https://github.com/rolfmorel/macht
