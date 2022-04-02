@@ -1,0 +1,9 @@
+(/etc/dnf/dnf.conf)
+fastestmirror=True
+defaultyes=True
+
+https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/
+https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/
+
+https://www.cyberciti.biz/faq/fedora-linux-install-broadcom-wl-sta-wireless-driver-for-bcm43228/
+http://lifeofageekadmin.com/how-to-get-broadcom-4312-wireless-working-on-fedora-23/
