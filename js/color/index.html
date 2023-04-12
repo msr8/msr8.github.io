@@ -1,0 +1,149 @@
+<html>
+
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="darkreader-lock">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Comfortaa:700">
+
+    <script defer>
+        function get_rand_color() {
+            let c1 = Math.floor(Math.random() * 256);
+            let c2 = Math.floor(Math.random() * 256);
+            let c3 = Math.floor(Math.random() * 256);
+            return [c1, c2, c3];
+        }
+
+        function get_opposite_color(colors) {
+            let opp_colors = [];
+            for (let i=0; i<3; i++) {
+                opp_colors[i] = 255 - colors[i];
+            }
+            return opp_colors;
+        }
+
+        function get_hex(colors) {
+            let hex = [];
+            let i;
+            for (let i=0; i<3; i++) {
+                hex[i] = colors[i].toString(16).toUpperCase();
+                if (hex[i].length == 1) {hex[i] = `0${hex[i]}`}
+            }
+            return `${hex[0]}${hex[1]}${hex[2]}`;
+        }
+
+        function get_rgb(colors) {
+            let rgb = [];
+            for (let i=0; i<3; i++) {
+                rgb[i] = colors[i].toString();
+                if       (rgb[i].length == 1)    {rgb[i] = `  ${rgb[i]}`;}
+                else if  (rgb[i].length == 2)    {rgb[i] = ` ${rgb[i]}`;}
+            }
+            return `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+        }
+
+        function change_color() {
+            const html       = document.getElementsByTagName('html')[0];
+            const rgbtext    = document.getElementById("rgbtext");
+            const rgbhex     = document.getElementById('rgbhex');
+            const flexitem   = document.getElementById('flexitem');
+            const button     = document.getElementById('button');
+            let   colors     = get_rand_color();
+            let   opp_colors = get_opposite_color(colors);
+            let   opp_text   = get_rgb(opp_colors);
+            let   rgb_text   = get_rgb(colors);
+            let   hex_text   = get_hex(colors);
+
+            console.log(colors, opp_colors);
+            rgbtext.textContent            = rgb_text;
+            rgbhex.textContent             = `#${hex_text}`;
+            html.style.backgroundColor     = `#${hex_text}`;
+            flexitem.style.backgroundColor = `rgba(${opp_colors[0]},${opp_colors[1]},${opp_colors[2]},0.9)`;
+            button.style.borderColor       = `#${hex_text}`;
+            rgbtext.style.color            = `#${hex_text}`;
+            rgbhex.style.color             = `#${hex_text}`;
+        }
+
+        window.onload = change_color;
+    </script>
+
+    <style>
+        /* Margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: transparent;
+        }
+
+        /* Flexbox */
+        .flexcontainer {
+            /* background-color: aqua; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 99.5vh;
+        }
+        .flexitem {
+            /* background-color: rgba(10,10,10,0.5); */
+            color: white;
+            padding: 20px;
+            border-radius: 7px;
+            text-align: center;
+            /* backdrop-filter: saturate(0) grayscale(1) brightness(.7) contrast(1000%) invert(1) opacity(1); */
+            /* backdrop-filter: blur(4px); */
+        }
+
+        /* Text in flexbox */
+        #rgbhex {
+            font-size: 2.5em;
+            text-align: center;
+            /* font-family: Comfortaa; */
+            font-family: RobotoMono;
+        }
+        #rgbtext {
+            font-family: UbuntuMono;
+        }
+
+        /* Button */
+        #button {
+            color: wheat;
+            font-family: Comfortaa;
+            font-weight: 700;
+            font-size: 1.5em;
+            background-color: rgba(10,10,10,0.5);
+            padding: 3%;
+            border-width: 3px;
+            border-radius: 10px;
+            border-style: solid;
+            /* border-top-color: aqua;
+            border-right-color: aqua;
+            border-bottom-color: blueviolet;
+            border-left-color: blueviolet; */
+            transition: 0.5s;
+            transition-property: background-color;
+            white-space: nowrap;
+        }
+        #button:hover{
+            cursor: pointer;
+            background-color: rgba(10,10,10,0.8);
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="flexcontainer">
+        <div class="flexitem" id="flexitem">
+            <span id="rgbhex">i</span><br>
+            <pre><span id="rgbtext">p</span><br></pre>
+            <br><button id="button" onclick="change_color()">Change color</button>
+        </div>
+    </div>
+</body>
+
+
+
+</html>
