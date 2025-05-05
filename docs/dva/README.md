@@ -598,7 +598,6 @@ root.mainloop()
 
 ## OUTPUT
 
-<center>
 
 
 
