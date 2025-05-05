@@ -270,4 +270,3 @@ plt.show()
 
 <center>
 
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjIAAAGwCAYAAACzXI8XAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjkuMiwgaHR0cHM6Ly9
